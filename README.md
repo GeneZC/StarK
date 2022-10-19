@@ -1,4 +1,4 @@
-## StarK <img src="./ironman.png" width="22" height="22" alt="stark" align=center/>
+## StarK <img src="./assets/ironman.png" width="22" height="22" alt="stark" align=center/>
 
 This repository contains code for EMNLP 2022 paper titled [Sparse Teachers Can Be Dense with Knowledge](https://arxiv.org/abs/2210.03923).
 
@@ -6,7 +6,7 @@ This repository contains code for EMNLP 2022 paper titled [Sparse Teachers Can B
 
 <!-- Thanks for your interest in our repo! -->
 
-* 10/19/22: We released our paper, code, and data. Check it out!
+* 10/19/22: We released our paper and code. Check it out!
 
 ## Quick Links
 
