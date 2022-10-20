@@ -226,12 +226,12 @@ def main():
     neuron_score = args.lam * neuron_expressive_score + (1 - args.lam) * neuron_friendly_score
 
     # Reorder for efficient indexing with module-wise sparsity.
-    # reorder heads for each layer in model, reorder neuron in model
     base_model = getattr(t_model, t_model.base_model_prefix, t_model)
     head_score, head_indices = torch.sort(head_score, dim=1, descending=True)
     neuron_score, neuron_indices = torch.sort(neuron_score, dim=1, descending=True)
     head_indices = {layer_idx: indices for layer_idx, indices in enumerate(head_indices)}
     neuron_indices = {layer_idx: indices for layer_idx, indices in enumerate(neuron_indices)}
+    base_model.reorder(head_indices, neuron_indices)
 
     # Compute module-wise sparsity from overall sparsity.
     head_sort = [
