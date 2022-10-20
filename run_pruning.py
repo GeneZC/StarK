@@ -166,7 +166,7 @@ def main():
         neuron_mask.grad = None
         model.zero_grad()
     
-    # Normalize & merge expressive score and knowledgable score.
+    # Normalize score.
     norm_per_layer = torch.pow(torch.pow(head_score, 2).sum(-1), 0.5)
     head_score /= norm_per_layer.unsqueeze(-1) + 1e-7
     norm_per_layer = torch.pow(torch.pow(neuron_score, 2).sum(-1), 0.5)
