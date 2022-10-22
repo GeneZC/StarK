@@ -3,7 +3,7 @@
 # parameter-pruned
 python run_rewinding.py \
     --model_type kd \
-    --teacher_model_path outputs/stark/parameter_pruned/kd_70_rte_0.25/ckpt \
+    --teacher_model_path outputs/stark/parameter_pruned/kd_70_rte_0.5/ckpt \
     --student_model_path outputs/prune/ft_rte/ckpt \
     --task_name rte \
     --data_type combined \
@@ -21,12 +21,12 @@ python run_rewinding.py \
     --seed 776 \
     --do_rewind \
     --student_sparsity 70 \
-    --lam 0.25
+    --lam 0.5
 
 # layer-dropped
 python run_rewinding.py \
     --model_type kd \
-    --teacher_model_path outputs/stark/layer_dropped/kd_4_rte_0.25/ckpt \
+    --teacher_model_path outputs/stark/layer_dropped/kd_4_rte_0.5/ckpt \
     --student_model_path outputs/finetune/ft_rte/ckpt \
     --task_name rte \
     --data_type combined \
@@ -44,4 +44,4 @@ python run_rewinding.py \
     --seed 776 \
     --do_rewind \
     --student_layer 4 \
-    --lam 0.25
+    --lam 0.5

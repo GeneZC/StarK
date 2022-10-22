@@ -10,7 +10,7 @@ python run_sparsification.py \
     --max_length 128 \
     --per_device_eval_batch_size 32 \
     --student_sparsity 70 \
-    --lam 0.25
+    --lam 0.5
 
 # layer-dropped
 python run_sparsification.py \
@@ -22,5 +22,5 @@ python run_sparsification.py \
     --max_length 128 \
     --per_device_eval_batch_size 32 \
     --student_layer 4 \
-    --lam 0.25
+    --lam 0.5
 
