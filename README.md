@@ -32,7 +32,7 @@ Recent advances in distilling pretrained language models have discovered that, b
 
 ### GLUE Data
 
-Get GLUE data through the [link](https://github.com/nyu-mll/jiant/blob/master/scripts/download_glue_data.py) and put it to the corresponding directory. For example, MRPC dataset should be placed into `datasets/mrpc`.
+Get GLUE data through the [link](https://github.com/nyu-mll/jiant/blob/master/scripts/download_glue_data.py) and put them to the corresponding directories. For example, MRPC dataset should be placed into `datasets/mrpc`.
 
 ### Training & Evaluation
 
@@ -40,11 +40,11 @@ The training and evaluation are achieved in several scripts. We provide example 
 
 **Finetuning**
 
-We provide an example of finetuning `bert-base-uncased` on RTE in `scripts/run_finetuning_rte.sh`. We explain some important arguments in following:
-* `--model_type`: Variant to use, should be `ft` in the case.
-* `--model_path`: Pretrained language models to start with, should be `bert-base-uncased` in the case and can be others as you like.
-* `--task_name`: Task to use, should be chosen from `rte`, `mrpc`, `stsb`, `sst2`, `qnli`, `qqp`, `mnli`, and `mnlimm`.
-* `--data_type`: Input format to use, default to `combined`.
+We provide an example of finetuning `bert-base-uncased` on RTE in `scripts/run_finetuning_rte.sh`. We explain some important arguments in the following:
+* `--model_type`: variant to use, should be `ft` in the case.
+* `--model_path`: pretrained language models to start with, should be `bert-base-uncased` in the case and can be others as you like.
+* `--task_name`: task to use, should be chosen from `rte`, `mrpc`, `stsb`, `sst2`, `qnli`, `qqp`, `mnli`, and `mnlimm`.
+* `--data_type`: input format to use, default to `combined`.
 
 **Pruning**
 
@@ -53,30 +53,30 @@ We provide and example of pruning a finetuned checkpoint on RTE in `scripts/run_
 **Distillation**
 
 We provide an example of distilling a finetuned teacher to a layer-dropped or parameter-pruned student on RTE in `scripts/run_distillation_rte.sh`. We explain some important arguments in following:
-* `--model_type`: Variant to use, should be `kd` in the case.
-* `--teacher_model_path`: Teacher models to use, should be the path to the finetuned teacher checkpoint.
-* `--student_model_path`: Student models to initialize, should be the path to the pruned/finetuned teacher checkpoint depending on the way you would like to initialize the student.
-* `--student_sparsity`: Student sparsity, should be set if you would like to use parameter-pruned student, e.g., 70. Otherwise, this argument should be left blank.
-* `--student_layer`: Student layer, should be set if you would like to use layer-dropped student, e.g., 4.
+* `--model_type`: variant to use, should be `kd` in the case.
+* `--teacher_model_path`: teacher models to use, should be the path to the finetuned teacher checkpoint.
+* `--student_model_path`: student models to initialize, should be the path to the pruned/finetuned teacher checkpoint depending on the way you would like to initialize the student.
+* `--student_sparsity`: student sparsity, should be set if you would like to use parameter-pruned student, e.g., 70. Otherwise, this argument should be left blank.
+* `--student_layer`: student layer, should be set if you would like to use layer-dropped student, e.g., 4.
 
 **Teacher Sparsification**
 
 We provide an example of sparsfying the teacher based on the student on RTE in `scripts/run_sparsification_rte.sh`. We explain some important arguments in following:
-* `--model_type`: Variant to use, should be `kd` in the case.
-* `--teacher_model_path`: Teacher models to use, should be the path to the finetuned teacher checkpoint.
-* `--student_model_path`: Student models to use, should be the path to the distilled student checkpoint.
-* `--student_sparsity`: Student sparsity, should be set if you would like to use parameter-pruned student, e.g., 70. Otherwise, this argument should be left blank.
-* `--student_layer`: Student layer, should be set if you would like to use layer-dropped student, e.g., 4.
+* `--model_type`: variant to use, should be `kd` in the case.
+* `--teacher_model_path`: teacher models to use, should be the path to the finetuned teacher checkpoint.
+* `--student_model_path`: student models to use, should be the path to the distilled student checkpoint.
+* `--student_sparsity`: student sparsity, should be set if you would like to use parameter-pruned student, e.g., 70. Otherwise, this argument should be left blank.
+* `--student_layer`: student layer, should be set if you would like to use layer-dropped student, e.g., 4.
 * `--lam`: the knowledgeableness tradeoff term to keep a balance between expressiveness and student-friendliness.
 
 **Rewinding**
 
 We provide an example of rewinding the student on RTE in `scripts/run_rewinding_rte.sh`. We explain some important arguments in following:
-* `--model_type`: Variant to use, should be `kd` in the case.
-* `--teacher_model_path`: Teacher models to use, should be the path to the sparsified teacher checkpoint.
-* `--student_model_path`: Student models to initialize, should be the path to the pruned/finetuned teacher checkpoint depending on the way you would like to initialize the student.
-* `--student_sparsity`: Student sparsity, should be set if you would like to use parameter-pruned student, e.g., 70. Otherwise, this argument should be left blank.
-* `--student_layer`: Student layer, should be set if you would like to use layer-dropped student, e.g., 4.
+* `--model_type`: variant to use, should be `kd` in the case.
+* `--teacher_model_path`: teacher models to use, should be the path to the sparsified teacher checkpoint.
+* `--student_model_path`: student models to initialize, should be the path to the pruned/finetuned teacher checkpoint depending on the way you would like to initialize the student.
+* `--student_sparsity`: student sparsity, should be set if you would like to use parameter-pruned student, e.g., 70. Otherwise, this argument should be left blank.
+* `--student_layer`: student layer, should be set if you would like to use layer-dropped student, e.g., 4.
 * `--lam`: the knowledgeableness tradeoff term to keep a balance between expressiveness and student-friendliness. Here, it is just used for folder names.
 
 ## Bugs or Questions?
