@@ -48,6 +48,19 @@ We provide an example of finetuning `bert-base-uncased` on RTE in `scripts/run_f
 * `--task_name`: task to use, should be chosen from `rte`, `mrpc`, `stsb`, `sst2`, `qnli`, `qqp`, `mnli`, and `mnlimm`.
 * `--data_type`: input format to use, default to `combined`.
 
+We also give the finetuned checkpoints from `bert-base-uncased` as follows:
+
+|Model|Checkpint|
+|--|--|
+|bert-base-rte|[huggingface](https://huggingface.co/GeneZC/bert-base-rte)|
+|bert-base-mrpc|[huggingface](https://huggingface.co/GeneZC/bert-base-mrpc)|
+|bert-base-stsb|[huggingface](https://huggingface.co/GeneZC/bert-base-stsb)|
+|bert-base-sst2|[huggingface](https://huggingface.co/GeneZC/bert-base-sst2)|
+|bert-base-qnli|[huggingface](https://huggingface.co/GeneZC/bert-base-qnli)|
+|bert-base-qqp|[huggingface](https://huggingface.co/GeneZC/bert-base-qqp)|
+|bert-base-mnli|[huggingface](https://huggingface.co/GeneZC/bert-base-mnli)|
+|bert-base-mnlimm|[huggingface](https://huggingface.co/GeneZC/bert-base-mnlimm)|
+
 **Pruning**
 
 We provide and example of pruning a finetuned checkpoint on RTE in `scripts/run_pruning_rte.sh`. The arguments should be self-contained.
