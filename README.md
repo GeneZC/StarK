@@ -38,7 +38,7 @@ Get GLUE data through the [link](https://github.com/nyu-mll/jiant/blob/master/sc
 
 ### Training & Evaluation
 
-The training and evaluation are achieved in several scripts. We provide example scripts as follows.
+The training is achieved in several scripts. We provide example scripts as follows.
 
 **Finetuning**
 
