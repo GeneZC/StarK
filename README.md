@@ -14,7 +14,7 @@ This repository contains code for EMNLP 2022 paper titled [Sparse Teachers Can B
   - [Getting Started](#getting-started)
     - [Requirements](#requirements)
     - [GLUE Data](#glue-data)
-    - [Training & Evaluation](#training&evaluation)
+    - [Training](#training)
   - [Bugs or Questions?](#bugs-or-questions)
   - [Citation](#citation)
 
