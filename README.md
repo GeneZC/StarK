@@ -50,7 +50,7 @@ We provide an example of finetuning `bert-base-uncased` on RTE in `scripts/run_f
 
 We also give the finetuned checkpoints from `bert-base-uncased` as follows:
 
-|Model|Checkpint|
+|Model|Checkpoint|
 |--|--|
 |bert-base-rte|[huggingface](https://huggingface.co/GeneZC/bert-base-rte)|
 |bert-base-mrpc|[huggingface](https://huggingface.co/GeneZC/bert-base-mrpc)|
