@@ -48,18 +48,18 @@ We provide an example of finetuning `bert-base-uncased` on RTE in `scripts/run_f
 * `--task_name`: task to use, should be chosen from `rte`, `mrpc`, `stsb`, `sst2`, `qnli`, `qqp`, `mnli`, and `mnlimm`.
 * `--data_type`: input format to use, default to `combined`.
 
-We also give the finetuned checkpoints from `bert-base-uncased` as follows:
+We also give the finetuned checkpoints from `bert-base-uncased` and `bert-large-uncased` as follows:
 
-|Model|Checkpoint|
-|--|--|
-|bert-base-rte|[huggingface](https://huggingface.co/GeneZC/bert-base-rte)|
-|bert-base-mrpc|[huggingface](https://huggingface.co/GeneZC/bert-base-mrpc)|
-|bert-base-stsb|[huggingface](https://huggingface.co/GeneZC/bert-base-stsb)|
-|bert-base-sst2|[huggingface](https://huggingface.co/GeneZC/bert-base-sst2)|
-|bert-base-qnli|[huggingface](https://huggingface.co/GeneZC/bert-base-qnli)|
-|bert-base-qqp|[huggingface](https://huggingface.co/GeneZC/bert-base-qqp)|
-|bert-base-mnli|[huggingface](https://huggingface.co/GeneZC/bert-base-mnli)|
-|bert-base-mnlimm|[huggingface](https://huggingface.co/GeneZC/bert-base-mnlimm)|
+|Model|Checkpoint|Model|Checkpoint|
+|--|--|--|--|
+|bert-base-rte|[huggingface](https://huggingface.co/GeneZC/bert-base-rte)|bert-large-rte|[huggingface](https://huggingface.co/GeneZC/bert-large-rte)|
+|bert-base-mrpc|[huggingface](https://huggingface.co/GeneZC/bert-base-mrpc)|bert-large-mrpc|[huggingface](https://huggingface.co/GeneZC/bert-large-mrpc)|
+|bert-base-stsb|[huggingface](https://huggingface.co/GeneZC/bert-base-stsb)|bert-large-stsb|[huggingface](https://huggingface.co/GeneZC/bert-large-stsb)|
+|bert-base-sst2|[huggingface](https://huggingface.co/GeneZC/bert-base-sst2)|bert-large-sst2|[huggingface](https://huggingface.co/GeneZC/bert-large-sst2)|
+|bert-base-qnli|[huggingface](https://huggingface.co/GeneZC/bert-base-qnli)|bert-large-qnli|[huggingface](https://huggingface.co/GeneZC/bert-large-qnli)|
+|bert-base-qqp|[huggingface](https://huggingface.co/GeneZC/bert-base-qqp)|bert-large-qqp|[huggingface](https://huggingface.co/GeneZC/bert-large-qqp)|
+|bert-base-mnli|[huggingface](https://huggingface.co/GeneZC/bert-base-mnli)|bert-large-mnli|[huggingface](https://huggingface.co/GeneZC/bert-large-mnli)|
+|bert-base-mnlimm|[huggingface](https://huggingface.co/GeneZC/bert-base-mnlimm)|bert-large-mnlimm|[huggingface](https://huggingface.co/GeneZC/bert-large-mnlimm)|
 
 **Pruning**
 
