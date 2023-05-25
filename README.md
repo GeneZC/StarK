@@ -36,7 +36,7 @@ Recent advances in distilling pretrained language models have discovered that, b
 
 Get GLUE data through the [link](https://github.com/nyu-mll/jiant/blob/master/scripts/download_glue_data.py) and put them to the corresponding directories. For example, MRPC dataset should be placed into `datasets/mrpc`.
 
-### Training & Evaluation
+### Training
 
 The training is achieved in several scripts. We provide example scripts as follows.
 
