@@ -6,7 +6,7 @@ This repository contains code for EMNLP 2022 paper titled [Sparse Teachers Can B
 
 <!-- Thanks for your interest in our repo! -->
 
-* 10/19/22: We released our paper and code. Check it out!
+* 19/10/2022: We released our paper and code. Check it out!
 
 ## Quick Links
 
