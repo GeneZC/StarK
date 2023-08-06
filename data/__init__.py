@@ -109,7 +109,7 @@ class DistributedDataset(IterableDataset):
         else:
             indices += (indices * math.ceil(num_padding_instances / len(indices)))[:num_padding_instances]
 
-        assert len(indices) == self.num_total_instances
+        assert len(indices) == self.total_num_instances
 
         # Subsample.
         indices = indices[self.rank:self.total_num_instances:self.num_replicas]
