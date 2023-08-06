@@ -92,28 +92,28 @@ class DistributedDataset(IterableDataset):
         self.total_num_instances = self.num_instances * self.num_replicas
 
     def __len__(self):
-        return self.num_instances
+        return self.total_num_instances
 
     def __iter__(self):
         if self.shuffle:
             generator = torch.Generator()
             generator.manual_seed(int(torch.empty((), dtype=torch.int64).random_().item()))
-            indices = torch.randperm(self.num_instances, generator=generator).tolist()
+            indices = torch.randperm(len(self.data), generator=generator).tolist()
         else:
-            indices = list(range(self.num_instances))
+            indices = list(range(len(self.data)))
 
-        num_padding_instances = self.total_num_instances - len(indices)
+        num_padding_examples = self.num_total_examples - len(indices)
         # Is the logic necessary?
-        if num_padding_instances <= len(indices):
-            indices += indices[:num_padding_instances]
+        if num_padding_examples <= len(indices):
+            indices += indices[:num_padding_examples]
         else:
-            indices += (indices * math.ceil(num_padding_instances / len(indices)))[:num_padding_instances]
+            indices += (indices * math.ceil(num_padding_examples / len(indices)))[:num_padding_examples]
 
-        assert len(indices) == self.num_total_instances
+        assert len(indices) == self.num_total_examples
 
         # Subsample.
-        indices = indices[self.rank:self.num_total_instances:self.num_replicas]
-        assert len(indices) == self.num_instances
+        indices = indices[self.rank:self.num_total_examples:self.num_replicas]
+        assert len(indices) == self.num_examples
 
         for idx in indices:
             yield self.data[idx]
