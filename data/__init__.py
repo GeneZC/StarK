@@ -92,7 +92,7 @@ class DistributedDataset(IterableDataset):
         self.total_num_instances = self.num_instances * self.num_replicas
 
     def __len__(self):
-        return self.total_num_instances
+        return self.num_instances
 
     def __iter__(self):
         if self.shuffle:
