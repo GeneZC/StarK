@@ -102,7 +102,7 @@ class DistributedDataset(IterableDataset):
         else:
             indices = list(range(len(self.data)))
 
-        num_padding_instances = self.num_total_instances - len(indices)
+        num_padding_instances = self.total_num_instances - len(indices)
         # Is the logic necessary?
         if num_padding_instances <= len(indices):
             indices += indices[:num_padding_instances]
@@ -112,7 +112,7 @@ class DistributedDataset(IterableDataset):
         assert len(indices) == self.num_total_instances
 
         # Subsample.
-        indices = indices[self.rank:self.num_total_instances:self.num_replicas]
+        indices = indices[self.rank:self.total_num_instances:self.num_replicas]
         assert len(indices) == self.num_instances
 
         for idx in indices:
